@@ -16,8 +16,8 @@ def total_salary(path):
     except FileNotFoundError:
         print("Файл не знайдено")
         return None
-    except Exception as e:
-        print(f"Сталася помилка: {e}")
+    except Exception as error:
+        print(f"Сталася помилка: {error}")
         return None
 
 total, average = total_salary("workers.txt")
