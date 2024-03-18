@@ -2,14 +2,10 @@ def parse_input(user_input):
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
     return cmd, *args
-
-
 def add_contact(args, contacts):
     name, phone = args
     contacts[name] = phone
     return "Contact added."
-
-
 def change_contact(args, contacts):
     name, phone = args
     if name in contacts:
@@ -17,12 +13,9 @@ def change_contact(args, contacts):
         return "Contact updated successfully"
     else:
         "Contact is missing."
-
-
 def show_phone(args, contacts):
     name = args.pop(0)
     return contacts[name]
-
 
 def main():
     contacts = {}
@@ -43,7 +36,7 @@ def main():
         elif command == "change":
             print(change_contact(args, contacts))
 
-        elif command == "show":
+        elif command == "phone":
             print(show_phone(args, contacts))
 
         elif command == "all":
