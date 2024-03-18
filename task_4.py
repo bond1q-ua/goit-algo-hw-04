@@ -15,7 +15,11 @@ def change_contact(args, contacts):
         "Contact is missing."
 def show_phone(args, contacts):
     name = args.pop(0)
-    return contacts[name]
+    try
+        return contacts[name]
+    except KeyError:
+        return  "Contact is missing."
+
 
 def main():
     contacts = {}
