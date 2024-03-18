@@ -32,7 +32,7 @@ def main():
             print("Good bye!")
             break
         elif command == "hello":
-            print("How can I help you?")
+            print("How can I help you? ")
 
         elif command == "add":
             print(add_contact(args, contacts))
